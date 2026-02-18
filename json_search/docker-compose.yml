@@ -1,0 +1,44 @@
+services:
+  json-helper-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: json-helper-mcp-server
+    ports:
+      - "8000:8000"  # MCP server port
+      - "8001:8001"  # Health check port
+    environment:
+      # Server Configuration
+      - SERVER_HOST=0.0.0.0  # Bind to all interfaces in container
+      - SERVER_PORT=8000
+      - HEALTH_CHECK_PORT=8001
+      
+      # MCP Authentication
+      - MCP_MASTER_API_KEY=${MCP_MASTER_API_KEY:-default-secret-key}
+      - MCP_MASTER_API_KEY_NAME=${MCP_MASTER_API_KEY_NAME:-x-api-key}
+      - CORRELATION_ID_NAME=${CORRELATION_ID_NAME:-x-correlation-id}
+      
+      # Logging Configuration
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LOG_FILE=${LOG_FILE:-}
+    volumes:
+      # Optional: Mount logs directory for persistent logs
+      - ./logs:/app/logs
+      # Optional: Mount custom .env file if needed
+      # - ./.env:/app/.env:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - mcp-network
+    # Security: Run as non-root user (matches Dockerfile)
+    user: "1001:1001"
+
+networks:
+  mcp-network:
+    driver: bridge
+    name: mcp-network

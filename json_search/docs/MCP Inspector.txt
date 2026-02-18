@@ -1,0 +1,17 @@
+github page - https://github.com/modelcontextprotocol/inspector
+
+Requirements
+Node.js: ^22.7.5
+
+Quick Start (UI mode)
+To get up and running right away with the UI, just execute the following:
+
+npx @modelcontextprotocol/inspector
+
+The server will start up and the UI will be accessible at http://localhost:6274.
+
+===========
+Under Authentication add a custom header and set the api-key header there matching with MCP Server's env variable.
+Then Click Connect.
+Then from Tools tab, you will get all the tools.
+Select a tool, give parameters and run it.

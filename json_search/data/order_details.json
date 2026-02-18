@@ -1,0 +1,65 @@
+{
+  "orders": [
+    {
+      "order_id": "7f6e1234-e89b-12d3-a456-426614174000",
+      "customer_name": "TechNova Solutions",
+      "order_date": "2026-02-15T10:30:00Z",
+      "status": "Processing",
+      "total_amount": 1250.50,
+      "items": [
+        { "item_id": 101, "item_type_id": 5, "name": "Ultra-Wide Monitor", "quantity": 2, "price": 400.00 },
+        { "item_id": 102, "item_type_id": 12, "name": "Mechanical Keyboard", "quantity": 3, "price": 120.00 },
+        { "item_id": 103, "item_type_id": 8, "name": "Ergonomic Mouse", "quantity": 3, "price": 30.16 }
+      ]
+    },
+    {
+      "order_id": "a1b2c3d4-e5f6-4789-abcd-1234567890ab",
+      "customer_name": "Lumina Creative",
+      "order_date": "2026-02-16T14:15:00Z",
+      "status": "Shipped",
+      "total_amount": 2100.00,
+      "items": [
+        { "item_id": 201, "item_type_id": 2, "name": "Graphic Tablet", "quantity": 1, "price": 1500.00 },
+        { "item_id": 202, "item_type_id": 22, "name": "Stylus Pen Pro", "quantity": 2, "price": 200.00 },
+        { "item_id": 203, "item_type_id": 9, "name": "Matte Screen Protector", "quantity": 4, "price": 50.00 }
+      ]
+    },
+    {
+      "order_id": "550e8400-e29b-41d4-a716-446655440000",
+      "customer_name": "Global Logistics Inc.",
+      "order_date": "2026-02-16T09:00:00Z",
+      "status": "Pending",
+      "total_amount": 450.75,
+      "items": [
+        { "item_id": 301, "item_type_id": 1, "name": "Label Printer", "quantity": 1, "price": 300.00 },
+        { "item_id": 302, "item_type_id": 4, "name": "Thermal Paper Roll", "quantity": 10, "price": 10.00 },
+        { "item_id": 303, "item_type_id": 15, "name": "Scanning Gun", "quantity": 1, "price": 50.75 }
+      ]
+    },
+    {
+      "order_id": "98765432-1234-5678-90ab-cdef12345678",
+      "customer_name": "Green Earth Cafe",
+      "order_date": "2026-02-17T11:45:00Z",
+      "status": "Delivered",
+      "total_amount": 89.90,
+      "items": [
+        { "item_id": 401, "item_type_id": 30, "name": "Biodegradable Cups", "quantity": 500, "price": 0.10 },
+        { "item_id": 402, "item_type_id": 31, "name": "Paper Straws", "quantity": 1000, "price": 0.02 },
+        { "item_id": 403, "item_type_id": 32, "name": "Bamboo Stirrers", "quantity": 200, "price": 0.09 },
+        { "item_id": 404, "item_type_id": 33, "name": "Recycled Napkins", "quantity": 100, "price": 0.01 }
+      ]
+    },
+    {
+      "order_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "customer_name": "Apex Fitness Hub",
+      "order_date": "2026-02-17T08:20:00Z",
+      "status": "In-Transit",
+      "total_amount": 3200.00,
+      "items": [
+        { "item_id": 501, "item_type_id": 50, "name": "Smart Treadmill", "quantity": 1, "price": 2500.00 },
+        { "item_id": 502, "item_type_id": 51, "name": "Yoga Mat", "quantity": 10, "price": 40.00 },
+        { "item_id": 503, "item_type_id": 52, "name": "Resistance Bands Set", "quantity": 15, "price": 20.00 }
+      ]
+    }
+  ]
+}

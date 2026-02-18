@@ -1,0 +1,4 @@
+[project]
+name = "json-helper-mcp-server"
+version = "1.0.0"
+description = "MCP Server with Streamable HTTP Transport - A sample implementation using FastMCP."
